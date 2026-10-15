@@ -2759,3 +2759,78 @@ main#top {
     min-height: calc(100svh - 20rem);
   }
 }
+
+
+/* ---------- Home hero: hook panel (replaced the featured video on 2026-10-15) ---------- */
+.hero-hooks {
+  height: 100%;
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+.hero-hooks-header h2 {
+  margin: 0.25rem 0 0;
+  font-family: var(--title-font);
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  line-height: 1.1;
+}
+.hero-hooks-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+.hero-hooks-list .hook {
+  position: relative;
+  padding: 0.55rem 0.9rem 0.55rem 1.1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--ink);
+  font-size: clamp(0.9rem, 1.15vw, 1.02rem);
+  line-height: 1.45;
+}
+.hero-hooks-list .hook::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 4px;
+  border-radius: 4px;
+  background: var(--accent-secondary);
+}
+.hero-hooks-list .hook strong {
+  color: #fff;
+  font-weight: 700;
+}
+.hero-hooks-list .hook-plus::before { background: #ff9f43; }
+.hero-hooks-list .hook-square::before { background: #a29bfe; }
+.hero-hooks-list .hook-circle::before { background: #55efc4; }
+.hero-hooks-list .hook-vertical::before { background: #74b9ff; }
+.hero-hooks-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.hero-hooks-tag {
+  font-family: var(--title-font);
+  letter-spacing: 0.04em;
+  color: var(--accent-secondary);
+  font-weight: 600;
+}
+.hero-hooks-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+@media (max-width: 900px) {
+  .hero-hooks { padding: 1.2rem 1.1rem; }
+  .hero-hooks-list .hook { font-size: 0.95rem; }
+}
