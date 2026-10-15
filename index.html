@@ -52,6 +52,11 @@
           {
             "@type": "Product",
             "@id": "https://ultimatejoystick.com/#product",
+            "additionalProperty": [
+              { "@type": "PropertyValue", "name": "Gate shapes", "value": "Plus (4-way), Square (8-way), Octagonal (8-way), Horizontal (2-way), Vertical (2-way), Circle (free)" },
+              { "@type": "PropertyValue", "name": "Pre-mapped games", "value": "2,860+" },
+              { "@type": "PropertyValue", "name": "ROMs included", "value": "No - use your own MAME ROM files" }
+            ],
             "name": "Ultimate Joystick Restrictor Gate System",
             "description": "Automated servo-driven restrictor gate system for arcade joysticks. Select a game in any frontend and the matching 4-way (plus), 8-way (square or octagonal), 2-way (horizontal or vertical) or circle gate installs itself. Ships assembled with joystick, servo restrictor assembly, wiring harness, Arduino Mega 2560 board and the control software with 2,860+ pre-mapped games.",
             "image": "https://ultimatejoystick.com/videos/ultimate-joystick/09-complete-start-to-finish.jpg",
@@ -68,6 +73,68 @@
               "url": "https://ultimatejoystick.com/order.html",
               "seller": { "@id": "https://ultimatejoystick.com/#organization" }
             }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://ultimatejoystick.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need to supply my own ROMs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Ultimate Joystick ships the game-to-gate mapping for 2,860+ titles and the control software. It does not include any game ROMs. You use the MAME ROM files you already own, and you point the app at that folder once during setup."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which frontends does it work with?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Any frontend that launches MAME: LaunchBox and BigBox, HyperSpin, Attract-Mode, RetroBat, CoinOPS, a batch file, or MAME on its own. The app watches the MAME process itself, so there is nothing to install inside your frontend."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What do I have to set up?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Plug the controller into a USB port, open the app, click Browse to select your MAME executable and your ROM folder, and start monitoring. The servos arrive wired and the board arrives flashed. A first-time calibration check takes a few minutes and is covered in the videos."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens when a game starts?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The app recognises the game, looks up its gate, swings the current plate out and the new plate in, one servo at a time, and shows a full-screen notice while it moves. When nothing is running the stick rests on the free-circle gate."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is it safe if my hand is on the stick?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The app will not move a plate while it sees the joystick being used. It shows a hands-clear notice, waits, retries, and if the stick is still being held it gives up with a visible message rather than fight you."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I change which gate a game uses?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Search the game in the Game Management tab, pick a gate shape, save. Every one of the pre-mapped titles can be overridden, and new games can be added the same way."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What computer does it need?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A Windows PC running MAME, one free USB port, and your ROM files. The control app is a single Windows program; no drivers beyond the standard USB-serial driver are needed."
+                }
+              }
+            ]
           },
           {
             "@type": "BreadcrumbList",
@@ -169,6 +236,204 @@
         </section>
 
 
+
+        <!-- How it works -->
+        <section id="how-it-works" class="section">
+          <div class="section-heading">
+            <span class="eyebrow">Plug In. Point. Play.</span>
+            <h2>Three steps from the box to your cabinet</h2>
+            <p>No soldering, no scripting, no frontend plugins. The servos arrive wired, the board arrives flashed, and the software already knows 2,860+ games.</p>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card glass-card">
+              <span class="step-num">01</span>
+              <h3>Plug it in</h3>
+              <p>Drop the joystick into your panel like any arcade stick, connect the Arduino Mega board to a USB port, and the servo harness to the board. That is the hardware install.</p>
+            </article>
+            <article class="step-card glass-card">
+              <span class="step-num">02</span>
+              <h3>Point it at MAME and your ROMs</h3>
+              <p>Open the app, click Browse twice: your MAME executable, then your ROM folder. You supply the ROMs you already own; we supply the mapping of every game to its gate.</p>
+            </article>
+            <article class="step-card glass-card">
+              <span class="step-num">03</span>
+              <h3>Play, from any frontend</h3>
+              <p>Press Start Monitoring once. From then on, launch games the way you always do. The app spots MAME starting, reads the game, and sets the gate before the title screen fades.</p>
+            </article>
+          </div>
+          <div class="frontend-strip glass-card" aria-label="Frontends that work with Ultimate Joystick">
+            <div class="frontend-strip-copy">
+              <span class="eyebrow">Works With Any Frontend</span>
+              <p>It watches MAME itself, not your menu, so there is nothing to install inside your frontend and nothing to break when the frontend updates.</p>
+            </div>
+            <ul class="frontend-pills">
+              <li>LaunchBox / BigBox</li><li>HyperSpin</li><li>Attract-Mode</li><li>RetroBat</li><li>CoinOPS</li><li>Maximus Arcade</li><li>Plain MAME</li><li>Your own batch file</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Animated gate demo -->
+        <section id="see-it-move" class="section">
+          <div class="section-heading">
+            <span class="eyebrow">Watch The Gate Change</span>
+            <h2>Four plates. One stick. The right shape every time.</h2>
+            <p>Each gate is a hinged plate with its own servo. When a game starts, the plate that is in swings out and the plate that game needs swings in, one servo at a time, under the stick.</p>
+          </div>
+          <div class="gate-demo-grid">
+            <figure class="gate-demo glass-card" aria-describedby="gate-demo-caption">
+              <svg class="gate-demo-svg" viewBox="0 0 360 360" role="img" aria-labelledby="gate-demo-title">
+                <title id="gate-demo-title">Top-down view of the joystick: restrictor plates swinging in and out as games change</title>
+                <defs>
+                  <radialGradient id="ballGrad" cx="38%" cy="32%" r="70%">
+                    <stop offset="0%" stop-color="#ff9ad5" />
+                    <stop offset="55%" stop-color="#ff63d1" />
+                    <stop offset="100%" stop-color="#7a1f63" />
+                  </radialGradient>
+                  <linearGradient id="plateGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#2a3566" />
+                    <stop offset="100%" stop-color="#141a3a" />
+                  </linearGradient>
+                </defs>
+                <!-- base plate -->
+                <rect x="18" y="18" width="324" height="324" rx="28" fill="#0d1230" stroke="rgba(255,255,255,0.12)" />
+                <circle cx="180" cy="180" r="112" fill="#070a1c" stroke="rgba(255,255,255,0.08)" />
+                <g fill="#2f3a6a"><circle cx="44" cy="44" r="7"/><circle cx="316" cy="44" r="7"/><circle cx="44" cy="316" r="7"/><circle cx="316" cy="316" r="7"/></g>
+                <!-- servo bodies at the corners -->
+                <g class="servo"><rect x="30" y="30" width="48" height="26" rx="5"/><rect x="30" y="30" width="48" height="26" rx="5" fill="none" stroke="rgba(69,243,177,0.45)"/></g>
+                <g class="servo"><rect x="282" y="30" width="48" height="26" rx="5"/><rect x="282" y="30" width="48" height="26" rx="5" fill="none" stroke="rgba(69,243,177,0.45)"/></g>
+                <g class="servo"><rect x="30" y="304" width="48" height="26" rx="5"/><rect x="30" y="304" width="48" height="26" rx="5" fill="none" stroke="rgba(69,243,177,0.45)"/></g>
+                <g class="servo"><rect x="282" y="304" width="48" height="26" rx="5"/><rect x="282" y="304" width="48" height="26" rx="5" fill="none" stroke="rgba(69,243,177,0.45)"/></g>
+                <!-- plates (pivot at the servo in each corner) -->
+                <g class="plate plate-plus"><path fill="url(#plateGrad)" stroke="#8c61ff" stroke-width="2" fill-rule="evenodd" d="M95 95 H265 V265 H95 Z M158 116 H202 V158 H244 V202 H202 V244 H158 V202 H116 V158 H158 Z" /></g>
+                <g class="plate plate-square"><path fill="url(#plateGrad)" stroke="#a29bfe" stroke-width="2" fill-rule="evenodd" d="M95 95 H265 V265 H95 Z M116 116 H244 V244 H116 Z" /></g>
+                <g class="plate plate-horizontal"><path fill="url(#plateGrad)" stroke="#ffd76d" stroke-width="2" fill-rule="evenodd" d="M95 95 H265 V265 H95 Z M116 160 H244 V200 H116 Z" /></g>
+                <g class="plate plate-vertical"><path fill="url(#plateGrad)" stroke="#74b9ff" stroke-width="2" fill-rule="evenodd" d="M95 95 H265 V265 H95 Z M160 116 H200 V244 H160 Z" /></g>
+                <!-- shaft and ball top -->
+                <circle cx="180" cy="180" r="40" fill="#0b0f26" stroke="rgba(255,255,255,0.1)" />
+                <circle cx="180" cy="180" r="13" fill="#3d4a7e" />
+                <circle class="ball" cx="180" cy="180" r="27" fill="url(#ballGrad)" />
+              </svg>
+              <figcaption id="gate-demo-caption" class="gate-demo-caption">
+                <span class="gate-label gate-label-circle"><strong>CIRCLE</strong> free 360&deg; &middot; nothing running, Tempest, Spy Hunter, Marble Madness</span>
+                <span class="gate-label gate-label-plus"><strong>PLUS</strong> 4-way &middot; Pac-Man, Donkey Kong, Frogger</span>
+                <span class="gate-label gate-label-square"><strong>SQUARE</strong> 8-way &middot; Street Fighter II, Metal Slug, Mortal Kombat</span>
+                <span class="gate-label gate-label-horizontal"><strong>HORIZONTAL</strong> 2-way &middot; Galaga, Space Invaders, Arkanoid</span>
+                <span class="gate-label gate-label-vertical"><strong>VERTICAL</strong> 2-way &middot; Depth Charge, Alpine Ski</span>
+              </figcaption>
+              <span class="gate-demo-note">Animated illustration of the mechanism</span>
+            </figure>
+            <div class="gate-demo-copy glass-card">
+              <span class="eyebrow">What You Are Seeing</span>
+              <ul class="checklist">
+                <li><strong>Circle is home.</strong> With no game running every plate is out and the stick moves freely.</li>
+                <li><strong>One servo at a time.</strong> The old plate swings out before the new one swings in, so plates never collide and the power draw stays low.</li>
+                <li><strong>Same gate, no movement.</strong> Switch between two 8-way games and nothing moves at all.</li>
+                <li><strong>It waits for you.</strong> If your hand is on the stick, the app shows a hands-clear notice and holds until the stick is still.</li>
+                <li><strong>Holds position.</strong> The servo keeps torque on the plate while you play, so a hard diagonal cannot push the gate open.</li>
+              </ul>
+              <a class="button button-secondary button-glow" href="./video_demo.html">See the software run it &rarr;</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- The control app -->
+        <section id="interface" class="section">
+          <div class="section-heading">
+            <span class="eyebrow">The Control App</span>
+            <h2>One window runs the whole show</h2>
+            <p>These are real screens from the shipping software. Every tab is shown in the video guides.</p>
+          </div>
+          <div class="app-gallery">
+            <figure class="app-shot glass-card">
+              <a href="./assets/app/monitor-and-test.jpg"><img src="./assets/app/monitor-and-test.jpg" width="1000" height="846" loading="lazy" alt="Monitor and Test tab: connection status, Start Monitoring, joystick direction indicators and the five gate test buttons" /></a>
+              <figcaption><strong>Monitor &amp; Test.</strong> Connect, start monitoring, test every direction and every gate.</figcaption>
+            </figure>
+            <figure class="app-shot glass-card">
+              <a href="./assets/app/game-management.jpg"><img src="./assets/app/game-management.jpg" width="1000" height="846" loading="lazy" alt="Game Management tab: search field, game list with assigned gates, and gate selector" /></a>
+              <figcaption><strong>Game Management.</strong> 2,860+ titles pre-mapped. Search, pick a gate, save. Override anything.</figcaption>
+            </figure>
+            <figure class="app-shot glass-card">
+              <a href="./assets/app/settings-paths.jpg"><img src="./assets/app/settings-paths.jpg" width="1000" height="846" loading="lazy" alt="Settings tab: Browse buttons for the MAME executable and the ROM folder" /></a>
+              <figcaption><strong>Settings.</strong> Two Browse clicks: your MAME executable and your ROM folder. That is the setup.</figcaption>
+            </figure>
+            <figure class="app-shot glass-card">
+              <a href="./assets/app/calibration.jpg"><img src="./assets/app/calibration.jpg" width="1000" height="846" loading="lazy" alt="Calibration tab: per-servo teach buttons for the engaged and released positions" /></a>
+              <figcaption><strong>Calibration.</strong> Teach each servo its in and out position once. Re-teach in minutes if you ever swap a servo.</figcaption>
+            </figure>
+            <figure class="app-shot glass-card">
+              <a href="./assets/app/splash-settings.jpg"><img src="./assets/app/splash-settings.jpg" width="1000" height="846" loading="lazy" alt="Splash screen settings: enable, choose image or text, preview" /></a>
+              <figcaption><strong>Splash screens.</strong> Choose what players see while a gate changes. Your artwork or ours.</figcaption>
+            </figure>
+            <figure class="app-shot glass-card">
+              <a href="./assets/app/gate-splash.jpg"><img src="./assets/app/gate-splash.jpg" width="1000" height="562" loading="lazy" alt="Full-screen splash naming the selected game and its assigned gate while the plate moves" /></a>
+              <figcaption><strong>What the player sees.</strong> Game name, gate, hands clear, then Ready.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- What you need + FAQ -->
+        <section id="requirements" class="section">
+          <div class="section-heading">
+            <span class="eyebrow">Straight Answers</span>
+            <h2>What you need, and what you don't</h2>
+          </div>
+          <div class="needs-grid">
+            <article class="needs-card glass-card">
+              <h3>In the box</h3>
+              <ul class="checklist">
+                <li>Arcade joystick with the servo restrictor assembly fitted</li>
+                <li>Four metal-gear digital micro servos per player, pre-wired</li>
+                <li>Arduino Mega 2560 board, pre-flashed</li>
+                <li>Heavy-duty extension harness</li>
+                <li>Control software download with 2,860+ games mapped</li>
+              </ul>
+            </article>
+            <article class="needs-card glass-card needs-card-accent">
+              <h3>On your side</h3>
+              <ul class="checklist">
+                <li>A Windows PC running MAME</li>
+                <li>One free USB port</li>
+                <li><strong>Your own ROM files.</strong> We ship the mapping, never the games.</li>
+                <li>About ten minutes for paths and a calibration check</li>
+                <li>Any frontend you like, or none</li>
+              </ul>
+            </article>
+          </div>
+          <div id="faq" class="faq-list">
+            <details class="faq-item glass-card" open>
+              <summary>Do I need to supply my own ROMs?</summary>
+              <p>Yes. Ultimate Joystick ships the game-to-gate mapping for 2,860+ titles and the control software. It does not include any game ROMs. You use the MAME ROM files you already own, and you point the app at that folder once during setup.</p>
+            </details>
+            <details class="faq-item glass-card">
+              <summary>Which frontends does it work with?</summary>
+              <p>Any frontend that launches MAME: LaunchBox and BigBox, HyperSpin, Attract-Mode, RetroBat, CoinOPS, a batch file, or MAME on its own. The app watches the MAME process itself, so there is nothing to install inside your frontend.</p>
+            </details>
+            <details class="faq-item glass-card">
+              <summary>What do I have to set up?</summary>
+              <p>Plug the controller into a USB port, open the app, click Browse to select your MAME executable and your ROM folder, and start monitoring. The servos arrive wired and the board arrives flashed. A first-time calibration check takes a few minutes and is covered in the videos.</p>
+            </details>
+            <details class="faq-item glass-card">
+              <summary>What happens when a game starts?</summary>
+              <p>The app recognises the game, looks up its gate, swings the current plate out and the new plate in, one servo at a time, and shows a full-screen notice while it moves. When nothing is running the stick rests on the free-circle gate.</p>
+            </details>
+            <details class="faq-item glass-card">
+              <summary>Is it safe if my hand is on the stick?</summary>
+              <p>The app will not move a plate while it sees the joystick being used. It shows a hands-clear notice, waits, retries, and if the stick is still being held it gives up with a visible message rather than fight you.</p>
+            </details>
+            <details class="faq-item glass-card">
+              <summary>Can I change which gate a game uses?</summary>
+              <p>Yes. Search the game in the Game Management tab, pick a gate shape, save. Every one of the pre-mapped titles can be overridden, and new games can be added the same way.</p>
+            </details>
+            <details class="faq-item glass-card">
+              <summary>What computer does it need?</summary>
+              <p>A Windows PC running MAME, one free USB port, and your ROM files. The control app is a single Windows program; no drivers beyond the standard USB-serial driver are needed.</p>
+            </details>
+          </div>
+          <div class="section-cta">
+            <a class="button button-primary button-glow" href="./order.html">Order your system</a>
+            <a class="button button-secondary button-glow" href="./video_demo.html">Watch the setup videos</a>
+          </div>
+        </section>
 
         <!-- 5 Restrictor Gate Showcase -->
         <section id="gates" class="section">
@@ -303,8 +568,8 @@
 
           <nav class="footer-nav" aria-label="Footer Navigation">
             <a href="mailto:support@ultimatejoystick.com">Contact Us</a>
-            <a href="./index.html">Support &amp; FAQ</a>
-            <a href="./index.html#gates">Firmware &amp; Setup</a>
+            <a href="./index.html#faq">Support &amp; FAQ</a>
+            <a href="./index.html#how-it-works">How It Works</a>
             <a href="./order.html#pricing">System Specs</a>
           </nav>
 
