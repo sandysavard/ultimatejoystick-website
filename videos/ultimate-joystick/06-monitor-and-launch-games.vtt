@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:00.029 --> 00:00:05.762
+Start on Monitor & Test with the connection ready.
+
+2
+00:00:05.771 --> 00:00:11.072
+Start monitoring when the setup is ready.
+
+3
+00:00:11.085 --> 00:00:16.472
+Choose the game from the front end.
+
+4
+00:00:16.482 --> 00:00:21.821
+The selected game shows its assigned gate.
+
+5
+00:00:21.827 --> 00:00:27.761
+Wait for Gate Status: Ready before playing.
+
+6
+00:00:27.770 --> 00:00:32.216
+Stop monitoring before changing setup.

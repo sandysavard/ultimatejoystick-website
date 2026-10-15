@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Order your Ultimate Joystick Restrictor Gate System. 1-Player ($100) or 2-Player ($200) turnkey packages with replacement parts available." />
+    <meta name="theme-color" content="#060714" />
+    <title>Order System | Ultimate Joystick</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./stripe-config.js" defer></script>
+    <script src="./stripe-payment-links.js" defer></script>
+    <script src="./stripe-checkout.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="page-order">
+    <div class="bg-shape shape-1" aria-hidden="true"></div>
+    <div class="bg-shape shape-2" aria-hidden="true"></div>
+    <div class="bg-shape shape-3" aria-hidden="true"></div>
+    <div class="bg-shape shape-4" aria-hidden="true"></div>
+
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html" aria-label="Ultimate Joystick home">
+          <span class="brand-copy">
+            <strong>ULTIMATE <span class="gradient-text">JOYSTICK</span></strong>
+            <span class="brand-sub">Restrictor Gate System</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary Navigation">
+          <a href="./index.html" class="nav-link"><span class="nav-icon">🏠</span> Home</a>
+          <a href="./video_demo.html" class="nav-link"><span class="nav-icon">🎥</span> Video Demo</a>
+          <a href="./order.html" class="nav-link active"><span class="nav-icon">🛒</span> Order System</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section id="pricing" class="section section-pricing">
+          <div class="section-heading">
+            <span class="eyebrow">Turnkey Systems &amp; Replacement Parts</span>
+            <h2>Select Your Ultimate Joystick System Package</h2>
+            <p>Each system comes fully assembled with arcade joysticks, automated restrictor plate assemblies, extension wiring harnesses, Arduino Mega 2560 Plus board, and companion control software.</p>
+          </div>
+
+          <div class="pricing-cards-grid">
+            <article class="pricing-card glass-card">
+              <div class="pricing-header">
+                <span class="pricing-badge">Single Player System</span>
+                <h3>1-Player System</h3>
+                <div class="pricing-cost">
+                  <span class="currency">$</span>
+                  <span class="amount">100</span>
+                  <span class="period">Complete Turnkey Package</span>
+                </div>
+              </div>
+              <p class="pricing-desc">Ideal for single-stick arcade machines, bartops, or dedicated shooter setups.</p>
+              <ul class="pricing-features">
+                <li><strong>1x</strong> Arcade Joystick</li>
+                <li><strong>1x</strong> Automated Servo Restrictor Assembly</li>
+                <li><strong>4x</strong> Metal-Gear Digital Micro Servos</li>
+                <li><strong>1x</strong> Heavy-Duty Extension Wiring Harness</li>
+                <li><strong>1x</strong> Arduino Mega 2560 Plus Board</li>
+                <li><strong>Control Software Suite</strong> (Direct Web Download)</li>
+                <li><strong>2,860+</strong> Pre-mapped Parent Games</li>
+              </ul>
+              <a class="button button-secondary button-glow" href="mailto:support@ultimatejoystick.com?subject=Ultimate%20Joystick%201-Player%20System" data-stripe-product="onePlayer">Order 1-Player System ($100)</a>
+            </article>
+
+            <article class="pricing-card glass-card featured">
+              <div class="featured-ribbon">Most Popular</div>
+              <div class="pricing-header">
+                <span class="pricing-badge badge-glow">Full Cabinet Dual Setup</span>
+                <h3>2-Player System</h3>
+                <div class="pricing-cost">
+                  <span class="currency">$</span>
+                  <span class="amount gradient-text">200</span>
+                  <span class="period">Complete Turnkey Package</span>
+                </div>
+              </div>
+              <p class="pricing-desc">The ultimate upgrade for 2-player arcade cabinets, fighting sticks, and home arcade machines.</p>
+              <ul class="pricing-features">
+                <li><strong>2x</strong> Arcade Joysticks</li>
+                <li><strong>2x</strong> Automated Servo Restrictor Assemblies</li>
+                <li><strong>8x</strong> Metal-Gear Digital Micro Servos</li>
+                <li><strong>2x</strong> Heavy-Duty Extension Wiring Harnesses</li>
+                <li><strong>1x</strong> Arduino Mega 2560 Plus Board</li>
+                <li><strong>Control Software Suite</strong> (Direct Web Download)</li>
+                <li><strong>2,860+</strong> Pre-mapped Games for P1 &amp; P2</li>
+              </ul>
+              <a class="button button-primary button-glow" href="mailto:support@ultimatejoystick.com?subject=Ultimate%20Joystick%202-Player%20System" data-stripe-product="twoPlayer">Order 2-Player System ($200)</a>
+            </article>
+          </div>
+
+          <p id="checkout-status" class="checkout-status glass-card" role="status" aria-live="polite" hidden></p>
+          <p class="local-purchase-test">
+            <a
+              data-local-purchase-test
+              href="http://127.0.0.1:4188/"
+              hidden
+            >Open TEST MODE purchase flow — fake currency, no real money</a>
+          </p>
+
+          <div class="replacement-parts-container glass-card">
+            <div class="replacement-header">
+              <div>
+                <span class="eyebrow">Component Assurance</span>
+                <h3>Need Individual Replacement Parts Down the Line?</h3>
+                <p>We build Ultimate Joystick to last. But if a board or servo ever fails after years of intense arcade play, you don't need to re-buy the whole system—order individual replacement parts directly whenever needed:</p>
+              </div>
+            </div>
+
+            <div class="parts-grid">
+              <div class="part-item">
+                <div class="part-icon">📟</div>
+                <div>
+                  <h4>Pre-Flashed Control Board</h4>
+                  <p>Replacement master controller board pre-loaded with firmware and serial communications logic.</p>
+                </div>
+              </div>
+              <div class="part-item">
+                <div class="part-icon">⚙️</div>
+                <div>
+                  <h4>Digital Servo Set</h4>
+                  <p>High-torque metal-gear micro servos tuned for restrictor gate positioning.</p>
+                </div>
+              </div>
+              <div class="part-item">
+                <div class="part-icon">🔌</div>
+                <div>
+                  <h4>Extension Wire Harness</h4>
+                  <p>Pre-terminated extension cabling harnesses for easy drop-in cabinet wiring.</p>
+                </div>
+              </div>
+              <div class="part-item">
+                <div class="part-icon">🛞</div>
+                <div>
+                  <h4>Restrictor Plate Linkage</h4>
+                  <p>Replacement 3D restrictor plate and servo linkage actuation assemblies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Standard Normal Size Site Footer -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <a class="brand" href="./index.html" aria-label="Ultimate Joystick Home">
+              <span class="brand-copy">
+                <strong>ULTIMATE <span class="gradient-text">JOYSTICK</span></strong>
+                <span class="brand-sub">Automated Servo Restrictor System</span>
+              </span>
+            </a>
+          </div>
+
+          <nav class="footer-nav" aria-label="Footer Navigation">
+            <a href="./index.html">Home</a>
+            <a href="./video_demo.html">Video Demo</a>
+            <a href="./order.html">Order System</a>
+            <a href="mailto:support@ultimatejoystick.com">Contact</a>
+          </nav>
+
+          <div class="footer-copyright">
+            <p>&copy; 2026 Ultimate Joystick System. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

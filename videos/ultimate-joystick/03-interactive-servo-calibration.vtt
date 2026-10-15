@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:00.029 --> 00:00:04.766
+Click Calibration to open servo calibration.
+
+2
+00:00:04.786 --> 00:00:12.186
+Use Manual Mode only for controlled calibration.
+
+3
+00:00:12.199 --> 00:00:18.707
+Save Current Positions after confirming movement.
+
+4
+00:00:18.719 --> 00:00:26.017
+Player 1 gate positions are adjusted one gate at a time.
+
+5
+00:00:26.027 --> 00:00:33.507
+Pos1 and Pos2 values define each gate movement.
+
+6
+00:00:33.517 --> 00:00:41.117
+Watch the Activity Log during calibration.

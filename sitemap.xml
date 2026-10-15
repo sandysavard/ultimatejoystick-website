@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://ultimatejoystick.com/</loc>
+    <lastmod>2026-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://ultimatejoystick.com/video_demo.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://ultimatejoystick.com/videos/ultimate-joystick/01-start-and-connect.jpg</video:thumbnail_loc>
+      <video:title>Start and Connect</video:title>
+      <video:description>Open Ultimate Joystick and confirm a ready connection.</video:description>
+      <video:content_loc>https://ultimatejoystick.com/videos/ultimate-joystick/01-start-and-connect.mp4</video:content_loc>
+      <video:duration>71</video:duration>
+      <video:publication_date>2026-07-27T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://ultimatejoystick.com/videos/ultimate-joystick/02-set-mame-and-rom-paths.jpg</video:thumbnail_loc>
+      <video:title>Set MAME and ROM Paths</video:title>
+      <video:description>Point Ultimate Joystick to the emulator and game folders.</video:description>
+      <video:content_loc>https://ultimatejoystick.com/videos/ultimate-joystick/02-set-mame-and-rom-paths.mp4</video:content_loc>
+      <video:duration>41</video:duration>
+      <video:publication_date>2026-07-27T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://ultimatejoystick.com/videos/ultimate-joystick/03-interactive-servo-calibration.jpg</video:thumbnail_loc>
+      <video:title>Interactive Servo Calibration</video:title>
+      <video:description>Use the Calibration tab in a careful, controlled order.</video:description>
+      <video:content_loc>https://ultimatejoystick.com/videos/ultimate-joystick/03-interactive-servo-calibration.mp4</video:content_loc>
+      <video:duration>41</video:duration>
+      <video:publication_date>2026-07-27T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://ultimatejoystick.com/videos/ultimate-joystick/04-test-joystick-and-gates.jpg</video:thumbnail_loc>
+      <video:title>Test Joystick and Gates</video:title>
+      <video:description>Confirm direction feedback and use the visible gate tests.</video:description>
+      <video:content_loc>https://ultimatejoystick.com/videos/ultimate-joystick/04-test-joystick-and-gates.mp4</video:content_loc>
+      <video:duration>31</video:duration>
+      <video:publication_date>2026-07-27T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://ultimatejoystick.com/videos/ultimate-joystick/05-assign-games-to-gates.jpg</video:thumbnail_loc>
+      <video:title>Assign Games to Gates</video:title>
+      <video:description>Match each game with the gate shape you want to use.</video:description>
+      <video:content_loc>https://ultimatejoystick.com/videos/ultimate-joystick/05-assign-games-to-gates.mp4</video:content_loc>
+      <video:duration>32</video:duration>
+      <video:publication_date>2026-07-27T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://ultimatejoystick.com/videos/ultimate-joystick/06-monitor-and-launch-games.jpg</video:thumbnail_loc>
+      <video:title>Monitor and Launch Games</video:title>
+      <video:description>Start monitoring and launch a configured game safely.</video:description>
+      <video:content_loc>https://ultimatejoystick.com/videos/ultimate-joystick/06-monitor-and-launch-games.mp4</video:content_loc>
+      <video:duration>32</video:duration>
+      <video:publication_date>2026-07-27T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://ultimatejoystick.com/videos/ultimate-joystick/07-configure-splash-screens.jpg</video:thumbnail_loc>
+      <video:title>Configure Splash Screens</video:title>
+      <video:description>Choose the messages and images shown during gate changes.</video:description>
+      <video:content_loc>https://ultimatejoystick.com/videos/ultimate-joystick/07-configure-splash-screens.mp4</video:content_loc>
+      <video:duration>38</video:duration>
+      <video:publication_date>2026-07-27T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://ultimatejoystick.com/videos/ultimate-joystick/08-troubleshooting-and-safe-shutdown.jpg</video:thumbnail_loc>
+      <video:title>Troubleshooting and Safe Shutdown</video:title>
+      <video:description>Check common problems, stop monitoring, and close safely.</video:description>
+      <video:content_loc>https://ultimatejoystick.com/videos/ultimate-joystick/08-troubleshooting-and-safe-shutdown.mp4</video:content_loc>
+      <video:duration>34</video:duration>
+      <video:publication_date>2026-07-27T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://ultimatejoystick.com/videos/ultimate-joystick/09-complete-start-to-finish.jpg</video:thumbnail_loc>
+      <video:title>Complete Start-to-Finish Guide</video:title>
+      <video:description>Follow the entire Ultimate Joystick setup and operating flow.</video:description>
+      <video:content_loc>https://ultimatejoystick.com/videos/ultimate-joystick/09-complete-start-to-finish.mp4</video:content_loc>
+      <video:duration>50</video:duration>
+      <video:publication_date>2026-07-27T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://ultimatejoystick.com/videos/ultimate-joystick/10-how-to-replace-the-servo.jpg</video:thumbnail_loc>
+      <video:title>How to Replace the Servo</video:title>
+      <video:description>Remove, center, install, teach, and test a replacement servo.</video:description>
+      <video:content_loc>https://ultimatejoystick.com/videos/ultimate-joystick/10-how-to-replace-the-servo.mp4</video:content_loc>
+      <video:duration>99</video:duration>
+      <video:publication_date>2026-08-02T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://ultimatejoystick.com/order.html</loc>
+    <lastmod>2026-07-27</lastmod>
+  </url>
+</urlset>

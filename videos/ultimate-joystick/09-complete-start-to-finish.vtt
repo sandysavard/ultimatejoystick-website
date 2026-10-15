@@ -1,0 +1,37 @@
+WEBVTT
+
+1
+00:00:00.014 --> 00:00:07.384
+Start by opening Ultimate Joystick.
+
+2
+00:00:07.409 --> 00:00:14.361
+Confirm connection status before setup.
+
+3
+00:00:14.395 --> 00:00:20.071
+Set MAME, ROM, and XML paths.
+
+4
+00:00:20.092 --> 00:00:24.841
+Calibrate servo positions carefully.
+
+5
+00:00:24.858 --> 00:00:28.731
+Assign games to the gate shapes they need.
+
+6
+00:00:28.748 --> 00:00:32.931
+Start monitoring when setup is ready.
+
+7
+00:00:32.944 --> 00:00:38.011
+The selected game displays the assigned gate.
+
+8
+00:00:38.040 --> 00:00:43.681
+Configure splash warnings and safety timing.
+
+9
+00:00:43.694 --> 00:00:49.601
+Stop monitoring and close only from a safe state.

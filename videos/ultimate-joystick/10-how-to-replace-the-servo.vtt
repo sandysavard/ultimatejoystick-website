@@ -1,0 +1,61 @@
+WEBVTT
+
+1
+00:00:00.038 --> 00:00:11.797
+How to replace the servo: remove, center, install, teach, and test.
+
+2
+00:00:11.808 --> 00:00:21.147
+Remove the old servo from the joystick restrictor gate.
+
+3
+00:00:21.159 --> 00:00:29.937
+Unplug it only after noting the exact board pins.
+
+4
+00:00:29.946 --> 00:00:35.146
+Detach the restrictor gate linkage from the old servo.
+
+5
+00:00:35.164 --> 00:00:40.925
+Connect the new servo before installing it.
+
+6
+00:00:40.935 --> 00:00:48.736
+Move the new servo to Center / 1500 microseconds.
+
+7
+00:00:48.743 --> 00:00:52.095
+Install the servo arm while the servo is centered.
+
+8
+00:00:52.103 --> 00:00:58.136
+Mount the servo into the joystick restrictor gate.
+
+9
+00:00:58.153 --> 00:01:01.955
+Open the Calibration tab.
+
+10
+00:01:01.978 --> 00:01:07.276
+Pos2 Default means released/out is the safe default.
+
+11
+00:01:07.289 --> 00:01:13.166
+Click Teach for the replaced servo.
+
+12
+00:01:13.178 --> 00:01:18.156
+Set and save Pos2 for released/out.
+
+13
+00:01:18.166 --> 00:01:23.366
+Set and save Pos1 for engaged/in.
+
+14
+00:01:23.378 --> 00:01:31.025
+Test Pos1 and Pos2 before normal use.
+
+15
+00:01:31.038 --> 00:01:38.756
+Finish at CIRCLE / ALL POS2.

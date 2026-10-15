@@ -1,0 +1,29 @@
+WEBVTT
+
+1
+00:00:00.025 --> 00:00:03.932
+Click Settings to enter the MAME and ROM setup area.
+
+2
+00:00:03.963 --> 00:00:11.502
+Confirm the MAME executable path.
+
+3
+00:00:11.519 --> 00:00:17.562
+Confirm the ROMs folder path.
+
+4
+00:00:17.579 --> 00:00:24.351
+Confirm the MAME XML game list.
+
+5
+00:00:24.367 --> 00:00:30.371
+Generate or refresh MAME XML data when needed.
+
+6
+00:00:30.388 --> 00:00:36.131
+Update ROMs or scan for newly added games.
+
+7
+00:00:36.148 --> 00:00:41.311
+Settings saved confirms the paths were accepted.
