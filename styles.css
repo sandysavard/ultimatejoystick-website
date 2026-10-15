@@ -2956,3 +2956,28 @@ main#top {
 
 @media (max-width: 980px) { .trust-strip { grid-template-columns: repeat(2, 1fr); } .policy-grid { grid-template-columns: 1fr; } .video-slot-placeholder { min-height: 34vh; } }
 @media (max-width: 620px) { .trust-strip { grid-template-columns: 1fr; } }
+
+
+/* ---------- Launch pass (2026-10-15): download / thank-you pages, compact mobile nav ---------- */
+.download-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem; }
+.download-card, .download-steps, .download-req { padding: 1.5rem 1.6rem; }
+.download-card { display: flex; flex-direction: column; gap: 0.9rem; }
+.download-meta { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; align-items: baseline; }
+.download-version { font-family: var(--title-font); color: var(--accent-secondary); font-size: 1.1rem; }
+.download-os { color: var(--ink-soft); font-size: 0.9rem; }
+.download-button { font-size: 1.05rem; padding: 0.95rem 1.4rem; text-align: center; }
+.download-note { margin: 0; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.5; }
+.download-note a { color: var(--accent-secondary); }
+.download-warn { padding: 0.8rem 0.9rem; border-radius: var(--radius-sm); background: rgba(255,215,109,0.08); border: 1px solid rgba(255,215,109,0.35); }
+.download-warn strong, .download-warn em { color: var(--ink); font-style: normal; }
+.download-steps h2, .download-req h2 { margin: 0 0 0.9rem; font-family: var(--title-font); font-size: 1.15rem; color: var(--ink); }
+.steps-list { margin: 0 0 1.2rem; padding-left: 1.3rem; display: grid; gap: 0.6rem; color: var(--ink-soft); line-height: 1.5; }
+.steps-list strong { color: var(--ink); }
+.download-req { margin-bottom: 0.4rem; }
+@media (max-width: 900px) { .download-grid { grid-template-columns: 1fr; } }
+
+/* Phones: keep the three nav links on one row so the fixed header never covers the page title */
+@media (max-width: 560px) {
+  .site-nav .nav-link { padding: 0.5rem 0.7rem; font-size: 0.78rem; letter-spacing: 0.02em; }
+  .site-nav .nav-icon { display: none; }
+}
