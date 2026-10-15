@@ -4,11 +4,11 @@
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://ultimatejoystick.com/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://ultimatejoystick.com/video_demo.html</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <video:video>
       <video:thumbnail_loc>https://ultimatejoystick.com/videos/ultimate-joystick/01-start-and-connect.jpg</video:thumbnail_loc>
       <video:title>Start and Connect</video:title>
@@ -102,6 +102,6 @@
   </url>
   <url>
     <loc>https://ultimatejoystick.com/order.html</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
 </urlset>

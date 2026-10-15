@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="description" content="See Ultimate Joystick in action: select a game from an arcade frontend, view its assigned restrictor gate, and follow the complete setup and operating walkthrough." />
+    <meta name="description" content="Automated restrictor gates for arcade joysticks: select a game in any frontend and the right 4-way, 8-way, 2-way or circle gate installs itself. 2,860+ games pre-mapped." />
+    <meta name="robots" content="noindex, follow" />
     <meta name="theme-color" content="#060714" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ultimate Joystick" />
     <meta property="og:title" content="Ultimate Joystick Restrictor Gate System" />
-    <meta property="og:description" content="Watch the complete Ultimate Joystick setup and operating walkthrough with captions." />
+    <meta property="og:description" content="Select the game and the correct restrictor gate installs itself. Automated servo gates for arcade joysticks, 2,860+ games pre-mapped, works with any frontend." />
     <meta property="og:image" content="https://ultimatejoystick.com/videos/ultimate-joystick/09-complete-start-to-finish.jpg" />
     <meta property="og:video" content="https://ultimatejoystick.com/videos/ultimate-joystick/09-complete-start-to-finish.mp4" />
     <meta property="og:video:type" content="video/mp4" />
@@ -15,6 +17,9 @@
     <meta property="og:video:height" content="720" />
     <meta property="og:url" content="https://ultimatejoystick.com/" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ultimate Joystick Restrictor Gate System" />
+    <meta name="twitter:description" content="Select the game and the correct restrictor gate installs itself. 2,860+ arcade games pre-mapped." />
+    <meta name="twitter:image" content="https://ultimatejoystick.com/videos/ultimate-joystick/09-complete-start-to-finish.jpg" />
     <link rel="canonical" href="https://ultimatejoystick.com/" />
     <title>Ultimate Joystick | Restrictor Gate System</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
@@ -26,13 +31,66 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": "Ultimate Joystick Complete Start-to-Finish Guide",
-        "description": "Follow the entire Ultimate Joystick setup and operating flow, including a staged frontend game selection and matching gate splash.",
-        "thumbnailUrl": "https://ultimatejoystick.com/videos/ultimate-joystick/09-complete-start-to-finish.jpg",
-        "uploadDate": "2026-07-27T00:00:00-07:00",
-        "duration": "PT50S",
-        "contentUrl": "https://ultimatejoystick.com/videos/ultimate-joystick/09-complete-start-to-finish.mp4"
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ultimatejoystick.com/#organization",
+            "name": "Ultimate Joystick",
+            "url": "https://ultimatejoystick.com/",
+            "logo": "https://ultimatejoystick.com/favicon.svg",
+            "email": "support@ultimatejoystick.com",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "email": "support@ultimatejoystick.com",
+              "availableLanguage": "English"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ultimatejoystick.com/#website",
+            "url": "https://ultimatejoystick.com/",
+            "name": "Ultimate Joystick",
+            "publisher": { "@id": "https://ultimatejoystick.com/#organization" }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://ultimatejoystick.com/#product",
+            "name": "Ultimate Joystick Restrictor Gate System",
+            "description": "Automated servo-driven restrictor gate system for arcade joysticks. Select a game in any frontend and the matching 4-way (plus), 8-way (square or octagonal), 2-way (horizontal or vertical) or circle gate installs itself. Ships assembled with joystick, servo restrictor assembly, wiring harness, Arduino Mega 2560 board and the control software with 2,860+ pre-mapped games.",
+            "image": "https://ultimatejoystick.com/videos/ultimate-joystick/09-complete-start-to-finish.jpg",
+            "brand": { "@type": "Brand", "name": "Ultimate Joystick" },
+            "category": "Arcade cabinet parts",
+            "url": "https://ultimatejoystick.com/order.html",
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "lowPrice": "100",
+              "highPrice": "200",
+              "offerCount": 2,
+              "availability": "https://schema.org/InStock",
+              "url": "https://ultimatejoystick.com/order.html",
+              "seller": { "@id": "https://ultimatejoystick.com/#organization" }
+            }
+          },
+          {
+            "@type": "VideoObject",
+            "name": "Ultimate Joystick Complete Start-to-Finish Guide",
+            "description": "Follow the entire Ultimate Joystick setup and operating flow, including a staged frontend game selection and matching gate splash.",
+            "thumbnailUrl": "https://ultimatejoystick.com/videos/ultimate-joystick/09-complete-start-to-finish.jpg",
+            "uploadDate": "2026-07-27T00:00:00-07:00",
+            "duration": "PT50S",
+            "contentUrl": "https://ultimatejoystick.com/videos/ultimate-joystick/09-complete-start-to-finish.mp4",
+            "embedUrl": "https://ultimatejoystick.com/#ultimate-joystick-video",
+            "publisher": { "@id": "https://ultimatejoystick.com/#organization" }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ultimatejoystick.com/" }
+            ]
+          }
+        ]
       }
     </script>
   </head>

@@ -1,0 +1,69 @@
+# Ultimate Joystick - static site rules for Hostinger shared hosting (LiteSpeed/Apache).
+# Deployed as-is with the site. Edit here, never in hPanel's file manager.
+
+Options -Indexes
+DirectoryIndex index.html
+
+# ---------- Canonical host: https:// and no www ----------
+RewriteEngine On
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://ultimatejoystick.com/$1 [R=301,L]
+
+# /index.html -> /   (one URL for the home page)
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Legacy byte-identical twin of the home page
+RewriteRule ^ultimate_joystick\.html$ / [R=301,L]
+
+# Never serve the developer-only folders and files that ship in the repo
+RewriteRule ^(deploy|tools|marketing)(/|$) - [F,L]
+<FilesMatch "\.(md|test\.js|json|ps1|sh|example)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^(sitemap\.xml|robots\.txt)$">
+  Require all granted
+</FilesMatch>
+
+ErrorDocument 404 /404.html
+
+# ---------- MIME types the site relies on ----------
+AddType text/vtt .vtt
+AddType video/mp4 .mp4
+AddType image/svg+xml .svg
+AddType application/manifest+json .webmanifest
+
+# ---------- Compression ----------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/vtt text/xml application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# ---------- Caching ----------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/xml "access plus 1 hour"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType video/mp4 "access plus 30 days"
+  ExpiresByType text/vtt "access plus 30 days"
+</IfModule>
+
+# ---------- Security headers ----------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+  # Scripts are all first-party files; styles need 'unsafe-inline' for the few style="" attributes;
+  # Google Fonts is the only third party; checkout is a plain link to buy.stripe.com (no frame, no fetch).
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self' https://buy.stripe.com; upgrade-insecure-requests"
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
