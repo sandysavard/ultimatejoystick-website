@@ -4,7 +4,7 @@
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://ultimatejoystick.com/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ultimatejoystick.com/video_demo.html</loc>
@@ -102,6 +102,10 @@
   </url>
   <url>
     <loc>https://ultimatejoystick.com/order.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://ultimatejoystick.com/policies.html</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
 </urlset>

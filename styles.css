@@ -2913,3 +2913,46 @@ main#top {
 @media (max-width: 620px) {
   .steps-grid, .app-gallery { grid-template-columns: 1fr; }
 }
+
+
+/* ---------- Store-grade pass (2026-10-15): video slot, trust strip, specs table, policies ---------- */
+.section-video-slot { margin-top: 0; }
+.video-slot { padding: 0.9rem; }
+.video-slot-placeholder { position: relative; aspect-ratio: 16 / 9; min-height: 42vh; border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; text-align: center; padding: 2rem;
+  background: radial-gradient(60% 80% at 50% 50%, rgba(140,97,255,0.22), transparent 70%), repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0 12px, transparent 12px 24px), #070a1c; border: 1px dashed rgba(255,255,255,0.18); }
+.video-slot-badge { position: absolute; top: 1rem; left: 1rem; padding: 0.35rem 0.8rem; border-radius: 999px; background: rgba(255,77,109,0.18); border: 1px solid rgba(255,77,109,0.5); color: #ffb3c1; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; }
+.video-slot-badge::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent-danger); margin-right: 0.5rem; animation: rec-blink 1.4s ease-in-out infinite; }
+@keyframes rec-blink { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+.video-slot-play { width: 84px; height: 84px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.35); background: rgba(255,255,255,0.06); position: relative; }
+.video-slot-play::after { content: ""; position: absolute; left: 34px; top: 26px; border-left: 26px solid var(--ink); border-top: 16px solid transparent; border-bottom: 16px solid transparent; }
+.video-slot-text { margin: 0; font-family: var(--title-font); font-size: clamp(1.2rem, 2.4vw, 1.9rem); color: var(--ink); line-height: 1.3; }
+.video-slot-text span { display: block; margin-top: 0.6rem; font-family: var(--body-font); font-size: 1rem; color: var(--ink-soft); max-width: 46rem; }
+.video-slot-player { display: block; width: 100%; height: auto; border-radius: var(--radius-md); background: #000; }
+
+.trust-strip { list-style: none; margin: 1.6rem 0 0.6rem; padding: 0.9rem 1rem; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.8rem; }
+.trust-strip li { display: flex; flex-direction: column; gap: 0.15rem; padding: 0.4rem 0.6rem; border-left: 3px solid var(--accent-secondary); }
+.trust-strip strong { color: var(--ink); font-size: 0.95rem; }
+.trust-strip span { color: var(--ink-soft); font-size: 0.82rem; line-height: 1.35; }
+.trust-note { text-align: center; color: var(--ink-soft); font-size: 0.92rem; margin: 0 0 1.6rem; }
+.trust-note a { color: var(--accent-secondary); }
+
+.specs-block { padding: 1.4rem 1.5rem; margin-bottom: 1.6rem; }
+.section-heading-tight { margin-bottom: 1rem; }
+.specs-scroll { overflow-x: auto; }
+.specs-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.specs-table th, .specs-table td { padding: 0.7rem 0.8rem; border-top: 1px solid var(--glass-border); text-align: left; vertical-align: top; color: var(--ink-soft); }
+.specs-table thead th { border-top: none; color: var(--ink); font-family: var(--title-font); font-size: 0.95rem; }
+.specs-table thead th span { display: block; font-family: var(--body-font); color: var(--accent-secondary); font-size: 1.1rem; margin-top: 0.2rem; }
+.specs-table tbody th { color: var(--ink); font-weight: 600; width: 28%; }
+.specs-table td { color: var(--ink-soft); }
+.specs-table tbody tr:nth-child(odd) { background: rgba(255,255,255,0.025); }
+
+.policies .section-heading a { color: var(--accent-secondary); }
+.policy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.policy-card { padding: 1.5rem 1.6rem; }
+.policy-card h2 { margin: 0 0 0.9rem; font-family: var(--title-font); font-size: 1.25rem; color: var(--ink); }
+.policy-wide { grid-column: 1 / -1; }
+.policy-updated { margin: 1rem 0 0; color: var(--ink-muted); font-size: 0.85rem; }
+
+@media (max-width: 980px) { .trust-strip { grid-template-columns: repeat(2, 1fr); } .policy-grid { grid-template-columns: 1fr; } .video-slot-placeholder { min-height: 34vh; } }
+@media (max-width: 620px) { .trust-strip { grid-template-columns: 1fr; } }
