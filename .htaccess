@@ -6,6 +6,7 @@ DirectoryIndex index.html
 
 # ---------- Canonical host: https:// and no www ----------
 RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/.well-known/acme-challenge/ [NC]
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^(.*)$ https://ultimatejoystick.com/$1 [R=301,L]
