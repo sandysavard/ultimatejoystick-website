@@ -54,6 +54,14 @@ AddType application/manifest+json .webmanifest
   ExpiresByType text/vtt "access plus 30 days"
 </IfModule>
 
+# ---------- Versioned assets (?v=<hash>, see tools/stamp-assets.mjs): cache for a year, immutable ----------
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js)$">
+    SetEnvIf Query_String "(^|&)v=[0-9a-f]+" VERSIONED_ASSET
+    Header set Cache-Control "public, max-age=31536000, immutable" env=VERSIONED_ASSET
+  </FilesMatch>
+</IfModule>
+
 # ---------- Security headers ----------
 <IfModule mod_headers.c>
   <Files "order.html">
@@ -66,9 +74,7 @@ AddType application/manifest+json .webmanifest
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
-  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
-  Header always set Cross-Origin-Opener-Policy "same-origin"
-  Header always set Cross-Origin-Resource-Policy "same-origin"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
   # Scripts are all first-party files; styles need 'unsafe-inline' for the few style="" attributes;
   # Google Fonts is the only third party; checkout is a plain link to buy.stripe.com (no frame, no fetch).
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self' https://buy.stripe.com; upgrade-insecure-requests"
