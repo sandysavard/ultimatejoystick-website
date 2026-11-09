@@ -24,6 +24,9 @@
   const NOT_READY_MESSAGE =
     "Stripe checkout is not active yet. Please check back soon.";
 
+  const CLOSED_MESSAGE =
+    "Ordering is not open yet - coming soon. Email support@ultimatejoystick.com to be notified.";
+
   function isAllowedStripePaymentLink(value) {
     if (typeof value !== "string" || value.trim() === "") {
       return false;
@@ -57,6 +60,22 @@
     });
   }
 
+  function blockClosedButton(button, status) {
+    button.dataset.stripeReady = "false";
+    button.setAttribute("href", "#checkout-status");
+    button.setAttribute("aria-disabled", "true");
+    if (button.classList) {
+      button.classList.add("is-checkout-disabled");
+    }
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      if (status) {
+        status.textContent = CLOSED_MESSAGE;
+        status.hidden = false;
+      }
+    });
+  }
+
   function enableConfiguredButton(button, paymentLink) {
     button.setAttribute("href", paymentLink);
     button.removeAttribute("aria-disabled");
@@ -72,10 +91,15 @@
         ? config.paymentLinks
         : {};
     const status = documentObject.getElementById("checkout-status");
+    const purchasesOpen = !!config && config.purchasesOpen === true;
 
     documentObject
       .querySelectorAll("[data-stripe-product]")
       .forEach(function (button) {
+        if (!purchasesOpen) {
+          blockClosedButton(button, status);
+          return;
+        }
         const paymentLink = paymentLinks[button.dataset.stripeProduct];
         if (isAllowedStripePaymentLink(paymentLink)) {
           enableConfiguredButton(button, paymentLink);

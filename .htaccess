@@ -55,6 +55,12 @@ AddType application/manifest+json .webmanifest
 
 # ---------- Security headers ----------
 <IfModule mod_headers.c>
+  <Files "order.html">
+    Header always set X-Robots-Tag "noindex, nofollow"
+  </Files>
+  <Files "thank-you.html">
+    Header always set X-Robots-Tag "noindex, nofollow"
+  </Files>
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"

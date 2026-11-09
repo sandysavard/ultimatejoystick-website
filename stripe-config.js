@@ -10,6 +10,8 @@
  */
 window.ULTIMATE_JOYSTICK_STRIPE = Object.freeze({
   mode: "test",
+  // Purchase gate: while not exactly true, order buttons only show "coming soon".
+  purchasesOpen: false,
   paymentLinks: Object.freeze({
     onePlayer: "https://buy.stripe.com/test_7sYaEZcv4fz61WO5eQejK00",
     twoPlayer: "https://buy.stripe.com/test_eVqcN77aK1Ig8lcgXyejK01",
