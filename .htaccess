@@ -45,8 +45,6 @@ AddType application/manifest+json .webmanifest
   ExpiresActive On
   ExpiresByType text/html "access plus 0 seconds"
   ExpiresByType text/xml "access plus 1 hour"
-  ExpiresByType text/css "access plus 7 days"
-  ExpiresByType application/javascript "access plus 7 days"
   ExpiresByType image/svg+xml "access plus 30 days"
   ExpiresByType image/png "access plus 30 days"
   ExpiresByType image/jpeg "access plus 30 days"
@@ -54,11 +52,16 @@ AddType application/manifest+json .webmanifest
   ExpiresByType text/vtt "access plus 30 days"
 </IfModule>
 
-# ---------- Versioned assets (?v=<hash>, see tools/stamp-assets.mjs): cache for a year, immutable ----------
+# ---------- css/js: 7 days by default; with ?v=<hash> (tools/stamp-assets.mjs) one year, immutable ----------
+<IfModule mod_rewrite.c>
+  RewriteCond %{QUERY_STRING} (^|&)v=[0-9a-f]+ [NC]
+  RewriteRule \.(css|js)$ - [E=VERSIONED_ASSET:1]
+</IfModule>
 <IfModule mod_headers.c>
   <FilesMatch "\.(css|js)$">
-    SetEnvIf Query_String "(^|&)v=[0-9a-f]+" VERSIONED_ASSET
+    Header set Cache-Control "public, max-age=604800"
     Header set Cache-Control "public, max-age=31536000, immutable" env=VERSIONED_ASSET
+    Header set Cache-Control "public, max-age=31536000, immutable" env=REDIRECT_VERSIONED_ASSET
   </FilesMatch>
 </IfModule>
 
