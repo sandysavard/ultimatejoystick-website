@@ -2981,3 +2981,16 @@ main#top {
   .site-nav .nav-link { padding: 0.5rem 0.7rem; font-size: 0.78rem; letter-spacing: 0.02em; }
   .site-nav .nav-icon { display: none; }
 }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 1000;
+  padding: 0.6rem 1rem;
+  background: #060714;
+  color: #fff;
+}
+.skip-link:focus {
+  top: 1rem;
+}
