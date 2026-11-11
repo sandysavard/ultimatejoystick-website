@@ -3016,3 +3016,8 @@ main#top {
   .site-nav a, .footer-nav a, a.brand { min-height: 44px; display: inline-flex; align-items: center; }
   .faq-item summary { min-height: 44px; }
 }
+/* 390 audit fixes: tap targets, download button, ribbon */
+.site-nav a, .footer-nav a { min-width: 44px; justify-content: center; }
+.guide-transcript > summary { padding-block: 0.6rem; cursor: pointer; }
+.download-button { white-space: normal; max-width: 100%; text-align: center; }
+.featured-ribbon-clip { position: absolute; inset: 0; overflow: hidden; }
