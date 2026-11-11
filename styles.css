@@ -2882,6 +2882,7 @@ main#top {
 .checklist li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--accent-secondary); font-weight: 700; }
 .checklist li strong { color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
+  .bg-shape, .site-nav a.nav-link.active, .video-slot-badge::before { animation: none !important; }
   .gate-demo-svg .plate, .gate-demo-svg .ball, .gate-label { animation: none !important; }
   .gate-demo-svg .plate-plus { transform: rotate(0deg); }
   .gate-label-plus { opacity: 1; }

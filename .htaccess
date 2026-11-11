@@ -20,6 +20,9 @@ RewriteRule ^ultimate_joystick\.html$ / [R=301,L]
 
 # Never serve the developer-only folders and files that ship in the repo
 RewriteRule ^(deploy|tools|marketing)(/|$) - [F,L]
+# Deny every dotfile/dotfolder (.git, .env, ...) except the ACME challenge path
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/ [NC]
+RewriteRule (^|/)\. - [F,L]
 <FilesMatch "\.(md|test\.js|json|ps1|sh|example)$">
   Require all denied
 </FilesMatch>
