@@ -92,6 +92,10 @@
         : {};
     const status = documentObject.getElementById("checkout-status");
     const purchasesOpen = !!config && config.purchasesOpen === true;
+    if (!purchasesOpen && status) {
+      status.textContent = CLOSED_MESSAGE;
+      status.hidden = false;
+    }
 
     documentObject
       .querySelectorAll("[data-stripe-product]")
